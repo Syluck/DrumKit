@@ -1,0 +1,54 @@
+body {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  scale: 2;
+}
+
+.drum-kit {
+  position: relative;
+  width: 600px;  /* adjust to your image size */
+  max-width: 95vw;
+}
+
+h2 {
+  margin: 0;;
+  color: #0fa3947a;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  user-select: none;
+}
+.drum-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.drum {
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(117, 53, 78, 0);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.drum.playing {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #e9e2e4;
+}
+
+/* Position buttons manually over image */
+.drum[data-key="B"] { top: 55%; left: 46.5%; width: 40px; height: 80px; }
+.drum[data-key="S"] { top: 52.4%; left: 33.6%; width: 80px; height: 80px; }  /* Snare */
+.drum[data-key="D"] { top: 38%; left: 10%; width: 100px; height: 100px; }  /* Hi-hat */
+.drum[data-key="E"] { top: 26.5%; left: 18.5%; width: 115px; height: 115px; }  /* Open Hi-hat */
+.drum[data-key="F"] { top: 35%; left: 36%; width: 70px; height: 70px; }  /* Tom1 */
+.drum[data-key="G"] { top: 35%; left: 54%; width: 70px; height: 70px; }  /* Tom2 */
+.drum[data-key="V"] { top: 50%; left: 65%; width: 70px; height: 70px; }  /* Tom3 */
+.drum[data-key="H"] { top: 26.7%; left: 64.5%; width: 115px; height: 115px; }  /* Crash */
+.drum[data-key="J"] { top: 49.1%; left: 78%; width: 114px; height: 114px; }  /* Crash2
